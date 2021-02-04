@@ -1,0 +1,58 @@
+header {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+img {
+    width: 100%;
+}
+
+.backbutton {
+    width: 30%;
+    grid-column: 3/4;
+    align-content: end;
+}
+
+/*
+a.selected {
+    background-color:#1F75CC;
+    color:white;
+    z-index:100;
+  } */
+  
+  .messagepop {
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    cursor:default;
+    display:none;
+    margin-top: 15px;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:left;
+    width:50%;
+    z-index:50;
+    padding: 25px 25px 20px;
+  }
+  
+ /* label {
+    display: block;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    text-indent: -15px;
+  } 
+  
+  .messagepop p, .messagepop.div {
+    border-bottom: 1px solid #EFEFEF;
+    margin: 8px 0;
+    padding-bottom: 8px;
+  }

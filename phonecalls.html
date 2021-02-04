@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>take a peek...</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>phone calls...</h1>
+        <div class="backbutton" style="justify-self: end;">
+            <a href="index.html"><img id="back" src="images/back.png" alt="handwritten back">
+        </a></div>
+    </header>
+<main>
+    <div class="background">
+            <a href="/phonecall" id="phonecall"><img id="phone" src="images/blac-phone.png" alt="black rotary phone"></a>
+    </div>
+
+    <div class="messagepop pop">
+        <p>C: Hey <br>
+            Maggie: Hey  <br>
+            C: so, do you have anything you want to say to me? <br>
+            Maggie: Yeah, I'm sorry that I treated you like crap, can we still be friends? <br>
+            C: Why did you act like you hated me? <br>
+            Maggie: Because my loser ex boyfriend didn't like you and forced me to think that way. I am so sorry! <br>
+            C: I miss hanging out with you. <br>
+            Maggie: Me too.</p>
+      </div>
+      
+  </main>
+
+<script	src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script> 
+    function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('selected');
+  });    
+}
+
+$(function() {
+  $('#phonecall').on('click', function() {
+    if($(this).hasClass('selected')) {
+      deselect($(this));               
+    } else {
+      $(this).addClass('selected');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#phonecall'));
+    return false;
+  });
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
+    </script>
+</body>
+</html>
