@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone calls...</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<main>
+<body>
+    <header>
+        <h1>phone calls...</h1>
+        <div class="backbutton" style="justify-self: end;">
+            <a href="index.html"><img id="back" src="images/back.png" alt="handwritten back">
+        </a></div>
+    </header>
+
+ <div class="phonegrid">
+    
+<div class="popup-overlay">
+     <div class="popup-content"><button class="close">
+            <p>C: Hey <br>
+                Maggie: Hey  <br>
+                C: so, do you have anything you want to say to me? <br>
+                Maggie: Yeah, I'm sorry that I treated you like crap, can we still be friends? <br>
+                C: Why did you act like you hated me? <br>
+                Maggie: Because my loser ex boyfriend didn't like you and forced me to think that way. I am so sorry! <br>
+                C: I miss hanging out with you. <br>
+                Maggie: Me too.</p>
+        </button>    
+        </div></div>
+    <button class="open open1"><img id="phone" src="images/blac-phone.png" alt="black rotary phone"></button>
+
+    <div class="popup-overlay2">
+        <!--Creates the popup content-->
+         <div class="popup-content2"><button class="close">
+                <p>C: Hey <br>
+                    Maggie: Hey  <br>
+                    C: hheehee</p>
+        </button>    
+        </div></div>
+    <button class="open open2"><img id="phone" src="images/blac-phone.png" alt="black rotary phone"></button>
+
+    <div class="popup-overlay3">
+        <!--Creates the popup content-->
+         <div class="popup-content3"><button class="close">
+                <p>C: Hey <br>
+                    Maggie: Hey  <br>C: Hey <br>
+                    Maggie: Hey  <br>C: Hey <br>
+                    Maggie: Hey  <br>
+                    C: hheehee</p>
+        </button>    
+        </div></div>
+    <button class="open open3"><img id="phone" src="images/blac-phone.png" alt="black rotary phone"></button>
+   
+   
+   
+    </div>     
+</body>
+
+<script	src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script> 
+$(".open1").on("click", function() {
+  $(".popup-overlay, .popup-content").addClass("active");
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+$(".close, .popup-overlay").on("click", function() {
+  $(".popup-overlay, .popup-content").removeClass("active");
+});
+
+
+$(".open2").on("click", function() {
+  $(".popup-overlay2, .popup-content2").addClass("active");
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+$(".close2, .popup-overlay2").on("click", function() {
+  $(".popup-overlay2, .popup-content2").removeClass("active");
+});
+
+$(".open3").on("click", function() {
+  $(".popup-overlay3, .popup-content3").addClass("active");
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+$(".close3, .popup-overlay3").on("click", function() {
+  $(".popup-overlay3, .popup-content3").removeClass("active");
+});
+    </script>
+</main>
+</html>
