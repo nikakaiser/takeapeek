@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+	header {
+        margin: 30px;
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .backbutton {
+        width: 30%;
+        grid-column: 3/4;
+        align-content: end;
+        z-index: 100;
+    }
+
+    img {
+        width: 100%;
+    }
+  
+    * {
+        box-sizing: border-box;
+        /*   border: 1px solid black; */
+      }
+      
+      body {
+        font-family: 'Reenie Beanie', cursive;
+        font-size: 20px;
+      }
+      
+      ul {
+        display: flex;
+        min-height: 100vh;
+        max-height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+      }
+      
+      li {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        padding: 20px;
+    
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      li:hover {
+        text-decoration: blueviolet;
+        background: grey;
+      }
+      li.active {
+        flex: 5;
+        background-image: url('../images/ripped-notebook-page.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background-image: url('../images/gridpaper.jpg');*/
+        cursor: default;
+      }
+      li.active h2 {
+        color: gray;
+      }
+      li.active .section-content {
+        flex: 4;
+        opacity: 1;
+        transform: scaleX(1);
+      }
+      li .section-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        width: 100% ;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: black;
+      }
+      li .section-title h2 {
+        margin: 0;
+       /* transform: rotate(-90deg);*/
+        white-space: nowrap;
+      }
+      li .section-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding-right: 25px;
+        opacity: 0;
+        transition: all 0.25s 0.1s ease-out;
+      }
+      
+
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+.envelope-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3,25%)
+}

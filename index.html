@@ -9,18 +9,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-
-<main>
 <body>
+<main>
     <header>
         <h1>take a peek...</h1>
     </header>
 
     <div class="home">
-        <div class="secrets"><a href="#">
+        <div class="flowerenvelope"><a href="secrets.html">
             <img id="flowerenvelope" src="images/flower-envelope.png" alt="envelope with a purple flower">
         </a></div>
-        <div class="confessions"><a href="#">
+        <div class="confessions"><a href="confess.html">
             <img id="journal" src="images/diary-page.png" alt="diary page with illegible writing">
         </a></div>
         <div class="phonecalls"><a href="phonecalls.html">
@@ -29,6 +28,19 @@
         </a></div>
     </div>
     
-</body>
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    $(function(){
+			       $("#flowerenvelope").on({
+			        mouseenter: function(){
+			         $(this).attr('src','images/flower-envelope-secret.png');
+			       },
+			       mouseleave: function(){
+			         $(this).attr('src','images/flower-envelope.png');
+			       }
+			       }); });
+</script>
+
+</body>
 </html>
