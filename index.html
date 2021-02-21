@@ -12,8 +12,16 @@
 <body>
 <main>
     <header>
-        <h1>take a peek...</h1>
-    </header>
+        <img id="takeapeek" src="images/takeapeek-header.png" alt="take a peek header">
+        <div class="info-button" style="justify-self: end;">
+            <a class="popper-info" href=""><img id="infobutton" src="images/ripped-cardboard.png" alt="info button"> </a>
+        </div>
+        <div id="pop-info"><p>a collection of anonymous secrets, confessions, and imaginary phone calls. <br>
+            secrets are collected from Postsecret.com <br>
+            confessions come from reddit.com/confessions <br>
+            imaginary phone call transcripts can be found on learningtoloveyoumore.com
+        </p></div>
+    </header> 
 
     <div class="home">
         <div class="flowerenvelope"><a href="secrets.html">
@@ -23,7 +31,7 @@
             <img id="journal" src="images/diary-page.png" alt="diary page with illegible writing">
         </a></div>
         <div class="phonecalls"><a href="phonecalls.html">
-            <img id="phone" src="images/blac-phone.png" alt="black rotary phone">
+            <img id="phone" src="images/rotary-phone-1.png" alt="black rotary phone">
 
         </a></div>
     </div>
@@ -34,12 +42,36 @@
     $(function(){
 			       $("#flowerenvelope").on({
 			        mouseenter: function(){
-			         $(this).attr('src','images/flower-envelope-secret.png');
+			         $(this).attr('src','images/flower-envelope-secrets.png');
 			       },
 			       mouseleave: function(){
 			         $(this).attr('src','images/flower-envelope.png');
 			       }
 			       }); });
+    $(function(){
+			       $("#journal").on({
+			        mouseenter: function(){
+			         $(this).attr('src','images/diary-confess.png');
+			       },
+			       mouseleave: function(){
+			         $(this).attr('src','images/diary-page.png');
+			       }
+			       }); });
+$(function(){
+			       $("#phone").on({
+			        mouseenter: function(){
+			         $(this).attr('src','images/rotary-phone-1-phonecalls.png');
+			       },
+			       mouseleave: function(){
+			         $(this).attr('src','images/rotary-phone-1.png');
+			       }
+			       }); });
+
+$(function() {
+    $('a.popper-info').hover(function() {
+        $('#pop-info').toggle();
+    });
+});
 </script>
 
 </body>
