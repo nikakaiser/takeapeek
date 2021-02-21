@@ -136,24 +136,6 @@ img {
   grid-column: 4/5;
 }
 
-/*CONFESSIONS*/
-.plax {
-  min-height: 100vh;
-  background: transparent;
-  }
-
-#skrollable {
-		background-image: url('../images/gridpaper.jpg') repeat fixed;
-	}
-
-	#center {
-		background:#f9f9f9;
-		background:rgba(240,240,240,.7);
-		width:90%;
-		padding:1em;
-		margin:1em auto;
-		border:1px solid #bbb;
-	}
 
 /*SECRETS*/
 #secret-header {
